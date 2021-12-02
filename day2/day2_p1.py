@@ -1,12 +1,11 @@
 lines = open('input_p1.txt', 'r').readlines()
-commands = []
-for line in lines:
-    commands.append(line.strip().split())
 horizontal = 0
 vertical = 0
-for i in range(0, len(commands)):
-    amount = int(commands[i][1])
-    command = commands[i][0]
+
+for i in range(0, len(lines)):
+    line = lines[i].strip().split()
+    command = line[0]
+    amount = int(line[1])
     if command == "forward":
         horizontal += amount
     if command == "down":
